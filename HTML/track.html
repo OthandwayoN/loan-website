@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/CSS/tracking.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Loan Application Tracking</title>
+</head>
+<body>
+    <div id="navbar-placeholder">
+    </div>
+    <script>
+         $.get("navbar.html", function(data){
+            $("#navbar-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+<div class="strip">
+  <section class="introduction">
+    <h2>Welcome to All Inclusive Lends Loan Application Tracking</h2>
+    <p>Track the status of your loan application easily with All Inclusive Lends' convenient tracking system. Whether you're waiting for approval, pending verification, or need updates on the progress of your application, we've got you covered.</p>
+    <p>Simply enter your application reference number, email, and mobile number below, and All Inclusive Lends will provide you with real-time updates on the status of your loan application.</p>
+</section>
+  <div class="trackingForm">
+    <form id="trackingForm">
+      <label for="applicationRef">Application Reference Number:</label>
+      <input type="text" id="applicationRef" required>
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <br><br>
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" required>
+      <br><br>
+      <button type="submit">Track Application</button>
+    </form>
+    <div id="status"></div>
+  </div>
+</div>
+  <div id="footer-placeholder">
+</div>
+<script>
+     $.get("footer.html", function(data){
+        $("#footer-placeholder").replaceWith(data);
+    }).fail(function(xhr, status, error) {
+        console.error("Error loading footer:", error);
+    });
+</script> 
+  <script src="/JS/track.js"></script>
+</body>
+</html>
+ 

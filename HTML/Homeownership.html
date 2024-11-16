@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>financial information playlist</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="/CSS/caseStudy.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+        
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="heading">
+      <h1>Considering Homeownership</h1>
+   </div>
+
+   <nav class="navbar">
+      <a href="#" onclick="highlightBox('myths')"><span>Myths about renting vs buying a home</span></a>
+      <a href="#" onclick="highlightBox('prepare')"><span>How can I prepare to buy a home in the future?</span></a>
+      <a href="#" onclick="highlightBox('buying')"><span>How will buying a home change my monthly expenses?</span></a>
+     
+     
+   </nav>
+
+   <div class="button-container">
+      <a href="owninghome.html"><button class="button">Go Back</button>
+      </a>
+</div>
+
+</div>
+
+
+
+<section class="playlist-videos">
+
+   <h1 class="heading">playlist videos</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="https://youtu.be/fPvLanbxvk0" target="_blank" id="myths">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/buyrent.jpg" alt="">
+         <h3>Myths about renting vs buying a home</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/hOyMKoFZkBw" target="_blank" id="prepare">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/homebought.jpeg" alt="">
+         <h3>How can I prepare to buy a home in the future?</h3>
+      </a>
+
+
+      <a class="box" href="https://youtu.be/ireHY5ldElY" target="_blank" id="buying">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/list.jpeg" alt="">
+         <h3>How will buying a home change my monthly expenses?</h3>
+      </a>
+
+    
+
+    
+
+  
+   
+   </div>
+
+</section>
+<script>
+   function highlightBox(id) {
+      // Remove glow from all boxes
+      var allBoxes = document.querySelectorAll('.box');
+      allBoxes.forEach(function(box) {
+         box.classList.remove('glow');
+      });
+   
+      // Highlight the selected box
+      var box = document.getElementById(id);
+      if (box) {
+         box.classList.add('glow');
+         setTimeout(function() {
+            box.classList.remove('glow');
+         }, 3000); // Remove glow effect after 2 seconds
+      }
+   }
+   </script>
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>AllInclusive Lends</span> | all rights reserved!
+
+</footer>
+
+
+<!-- custom js file link  -->
+<script src="/JS/playlist.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>financial education playlist</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="/CSS/playlist.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+        
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="heading">
+      <h1>Social Media Scams</h1>
+   </div>
+   <nav class="navbar">
+      <a href="#" onclick="highlightBox('what')"><span>What are social media scams?</span></a>
+      <a href="#" onclick="highlightBox('warn')"><span>Warning signs of scams</span></a>
+      <a href="#" onclick="highlightBox('protect')"><span>Protecting identity online</span></a>
+      <a href="#" onclick="highlightBox('how')"><span>How to avoid scams</span></a>
+      
+   </nav>
+   <div class="button-container">
+      <a href="FinancialResilience.html"><button class="button">Go Back</button>
+      </a>
+</div>
+</div>
+
+
+
+<section class="playlist-videos">
+
+   <h1 class="heading">playlist videos</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="https://youtu.be/yDM4aVitFsw" target="_blank" id="what">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/social-media-scam-alert.webp" alt="">
+         <h3>What are social media scams?</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/1ozIhoxX3ik" target="_blank" id="warn">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/social-media-scams-header.jpg" alt="">
+         <h3>Warning signs of scams</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/720QvGjK3Kk" target="_blank" id="protect">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/protectIdentity.png" alt="">
+         <h3>Protecting identity online</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/LqrjfcSrP1o" target="_blank" id="how">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/avoid.jpeg" alt="">
+         <h3>How to avoid scams</h3>
+      </a>
+
+   
+   </div>
+
+</section>
+<script>
+   function highlightBox(id) {
+      // Remove glow from all boxes
+      var allBoxes = document.querySelectorAll('.box');
+      allBoxes.forEach(function(box) {
+         box.classList.remove('glow');
+      });
+   
+      // Highlight the selected box
+      var box = document.getElementById(id);
+      if (box) {
+         box.classList.add('glow');
+         setTimeout(function() {
+            box.classList.remove('glow');
+         }, 3000); // Remove glow effect after 2 seconds
+      }
+   }
+   </script>
+   
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>AllInclusive Lends</span> | all rights reserved!
+
+</footer>
+
+
+<!-- custom js file link  -->
+<script src="/JS/playlist.js"></script>
+
+
+
+</body>
+</html>

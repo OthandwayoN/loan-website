@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+    <link rel="stylesheet" href="/CSS/apply.css">
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+  publicKey: "Jy51MwJPlgwfgWLg4",
+});
+})();
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+      /* Style to highlight selected date */
+      .error-message {
+            color: red;
+        }
+        .input-field {
+  position: relative;
+  height: 50px;
+  width: 280px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.input-field input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
+}
+input::placeholder {
+  color: #b4b4b4;
+}
+.input-field .email-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #b4b4b4;
+}
+
+@media screen and (max-width:240px) {
+.input-field{
+  width: 140px;
+}
+.input-field .email-icon {
+  opacity: 0;
+}
+}
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const textFields = document.querySelectorAll('.letters-only');
+        
+        textFields.forEach(textField => {
+            textField.addEventListener('input', function(event) {
+                const input = event.target.value;
+                const onlyLetters = /^[A-Za-z]+$/;
+                
+                if (!onlyLetters.test(input)) {
+                    event.target.value = input.slice(0, -1); // Remove the last character (which is not a letter)
+                }
+            });
+        });
+    });
+      </script>
+  </head>
+  <body>
+    <div id="navbar-placeholder">
+    </div>
+    <script>
+         $.get("navbar.html", function(data){
+            $("#navbar-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+    <chat-bot platform_id="4c464895-ba0c-4393-a950-134926daca78" user_id="873fb4f6-0d2b-4282-873a-3795391f85c4" chatbot_id="9578a2c5-2b20-4151-9f8e-bb2b86289ec0"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">chatsimple</a></chat-bot><script src="https://cdn.chatsimple.ai/chat-bot-loader.js" defer></script>
+
+    <div id="page" class="site">
+      <div class="containerz">
+        <div class="form-box">
+          <div class="progress">
+            <div class="logo"><a href="home.html"><span>AllInclusive</span>Lends</a></div>
+            <ul class="progress-steps">
+            <li class="step active">
+              <span>1</span>
+              <p>Personal Details<br><span>30 seconds to complete</span></p>
+            </li>
+            <li class="step">
+              <span>2</span>
+              <p>Contact Details<br><span>30 seconds to complete</span></p>
+            </li>
+            <li class="step">
+              <span>3</span>
+              <p>Employment Details<br><span>30 seconds to complete</span></p>
+            </li>
+            <li class="step">
+              <span>4</span>
+              <p>Income & Expenses<br><span>30 seconds to complete</span></p>
+            </li>
+            <li class="step">
+              <span>5</span>
+              <p>Bank Details<br><span>30 seconds to complete</span></p>
+            </li>
+            <li class="step">
+              <span>6</span>
+              <p>Document Upload<br><span>30 seconds to complete</span></p>
+            </li>
+            <li class="step">
+              <span>7</span>
+              <p>Complete Application<br><span>0 seconds to complete</span></p>
+            </li>
+          </ul>
+          </div>
+          <form name="ourForm">
+            <div class="form-one form-step active">
+              <div class="bg-svg"></div>
+              <h2>Personal Information</h2>
+              <p>Enter your personal information correctly</p>
+              <div>
+              
+                <label>Full Name*</label>
+                <input type="text" id="name" class="letters-only" for="name" placeholder="e.g Lufuno">
+              </div>
+        
+              <div>
+                <label for="datepicker">Date Of Birth*</label>
+                <p class="error">This Field Is Required</p>
+                <input type="date" id="datepicker" name="datepicker" onchange="limitYearRange()">
+              </div>
+              <div class="input-fields">
+                <label class="labelGender">Gender*</label>
+                
+                <div class="radio-buttons">
+                    <input type="radio" id="female" value="female" name="gender" hidden>
+                    <label for="female">
+                        <img src="/MEDIA/female.png" alt="" id="female">
+                    </label>
+                        <input type="radio" id="male" name="gender" value="male" hidden>
+                    <label for="male">
+                        <img src="/MEDIA/male.png" alt="" id="male">
+                    </label>
+                    <div id="error-message" class="error-message" style="display: none;">Please select a gender.</div>
+                </div>
+            </div>
+              <div class="birth">
+                <label>National ID Number*</label>
+                <div id="error-message-invalid" class="error-message" style="display: none;">Invalid South African ID</div>
+                <div id="error-message-citizen" class="error-message" style="display: none;">We only offer loans to citizens and permanent residents</div>
+                <div id="error-message-gender" class="error-message" style="display: none;">ID does not match gender provided</div>
+                <div id="error-message-format" class="error-message" style="display: none;">ID does not match date of birth</div>
+                <div id="error-message-id" class="error-message" style="display: none;">ID must be 13-digits</div>
+                <input type="number" id="national-id-input" placeholder="National ID">
+              </div>
+             
+            </div>
+     
+           
+            
+            <script>
+              const selectBox = document.getElementById("types");
+             const numberInput = document.getElementById("numberInput");
+              document.addEventListener('DOMContentLoaded', function() {
+    // JavaScript code here
+    // Add event listener to the select box
+selectBox.addEventListener('change', function() {
+    // Check if the selected option is "student"
+    if (this.value === "student") {
+        // Set the maximum value of the input field to 60
+        numberInput.max = 60;
+    } else {
+        // Reset the maximum value to empty
+        numberInput.removeAttribute("max");
+    }
+});
+});
+ </script>
+          
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    var today = new Date();
+    var maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate()); // 18 years ago from today
+
+    $( "#datepicker" ).datepicker({
+      changeYear: true,
+      yearRange: "1964:" + today.getFullYear(), // Year range from 1954 to current year
+      maxDate: maxDate,
+      dateFormat: "yy-mm-dd", // Set the date format to match the input
+onSelect: function(dateText, inst) {
+        // Hide the datepicker after a date is selected
+        $(this).datepicker("hide");
+}
+    });
+  });
+
+ 
+</script>
+         
+            <div class="form-two form-step">
+              <div class="bg-svg"></div>
+              <h2>Contact Information</h2>
+              <div>
+                <label>Phone*</label>
+                
+                      <input id="cell" type="number" placeholder="+27 789-540-449 " class="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-slate-600 shadow-sm rounded-lg">
+                  </div>
+            
+              
+            
+                <label>Email*</label>
+                <div class="input-field">
+                  <input type="email" id='email' placeholder="Enter your email" spellcheck="false"/>
+                  <i class="uil uil-envelope email-icon"></i>
+                </div>
+             
+             
+              <div>
+                <label>Province*</label>
+                <select id="provinceSelect" required>
+                    <option value="none">Select Province</option>
+                    <option value="northern-cape">Northern Cape</option>
+                    <option value="gauteng">Gauteng</option>
+                    <option value="eastern-cape">Eastern Cape</option>
+                    <option value="free-state">Free Sate</option>
+                    <option value="western-cape">Western Cape</option>
+                    <option value="north-west">North West</option>
+                    <option value="kwazulu-natal">Kwazulu Natal</option>
+                    <option value="limpopo">Limpopo</option>
+                    <option value="mpumalanga">Mpumalanga</option>
+                </select>
+            </div>
+            <div>
+                <label>City*</label>
+                <select id="citySelect" required>
+                 
+                </select>
+            </div>
+            <div>
+                <label>Postal Code*</label>
+                <select id="postalCodeSelect" required>
+                </select>
+            </div>
+                
+              </div>
+              <script>
+        
+              </script>
+              
+              <div class="form-three form-step">
+                <div class="bg-svg"></div>
+                <h2>Employment Details</h2>
+                <div>
+                    <label for="employerInput">Employer</label>
+                    <input id="employerInput" type="text" class="letters-only" placeholder="e.g redPanda">
+                </div>
+                <div>
+                    <label for="yearsEmployedInput">Number of years employed</label>
+                    <input id="yearsEmployedInput" type="number" placeholder="years employed">
+                </div>
+                <div>
+                    <label for="provinceInput">Province</label>
+                    <input id="provinceInput" type="text" class="letters-only" placeholder="Province">
+                </div>
+                <div>
+                    <label for="cityInput">City</label>
+                    <input id="cityInput" type="text" class="letters-only" placeholder="City">
+                </div>
+                <div>
+                    <label for="zipCodeInput">Zip Code</label>
+                    <input id="zipCodeInput" type="number" placeholder="Postal/Zip Code">
+                </div>
+            </div>
+            
+            <div class="form-four form-step">
+              <div class="bg-svg"></div>
+              <h2>Loan Info</h2>
+             
+              <div>
+                <label>Loan Type</label>
+                <select name="loanType" id="loanType">
+                  <option value="">Select Loan Type</option>
+                  <option value="Personal">Personal Loan</option>
+                  <option value="Home">Home Loan</option>
+                  <option value="Vehicle">Vehicle Loan</option>
+                  <option value="Business">Business Loan</option>
+                  <option value="Student">Student Loan</option>
+                </select>
+              </div>
+              <div>
+                <label>Loan Amount</label>
+                <input type="number" id="loanAmount" placeholder="How much do you want to borrow">
+              </div>
+              <div>
+                <label>Loan Term (in months)</label>
+                <input type="number" id="repay" placeholder="Repayment months">
+              </div>
+              <h2>Income & Expenses</h2>
+              <div>
+                <label>Income Frequency</label>
+                <select name="income" id="incomeFrequency">
+                  <option value="">Select Income Frequency</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="weekly">Fortnighty</option>
+                  <option value="weekly">Monthly</option>
+                </select>
+              </div>
+              <div>
+                <label>Gross Income</label>
+                <input id="gross" type="number" placeholder="income before deductions">
+              </div>
+              <div>
+                <label>Net Income</label>
+                <input id="net" type="number" placeholder="income after deductions">
+              </div>
+              <div>
+                <label>Other Income</label>
+                <input id="other" type="number" placeholder="other income">
+              </div>
+          <h2>Expenses</h2>
+          <div>
+            <label>Rent</label>
+            <input id="rent" type="number" placeholder="0">
+          </div>
+          <div>
+            <label>Water/Electricity</label>
+            <input id ="water" type="number" placeholder="500">
+          </div>
+          <div>
+            <label>Groceries</label>
+            <input id="groceries" type="number" placeholder="600">
+          </div>
+          <div>
+            <label>Transport</label>
+            <input id="transport" type="number" placeholder="700">
+          </div>
+          <div>
+            <label>Medical</label>
+            <input id="medical" type="number"placeholder="800">
+          </div>
+          <div>
+            <label>School Fees</label>
+            <input id="school" type="number"  placeholder="900">
+          </div>
+          <div>
+            <label>Entertainment</label>
+            <input id="ent" type="number"  placeholder="1000">
+          </div>
+          <div>
+            <label>Other Commitments</label>
+            <input id="commit" type="number" placeholder="1100">
+          </div>
+            </div>
+
+            <div class="form-five form-step">
+              <div class="bg-svg"></div>
+              <h2>Bank Details</h2>
+              <div>
+                <label>Account Number</label>
+                <input type="number" placeholder="Account number">
+              </div>
+              <div>
+                <label>Bank</label>
+                <select id="bank">
+                  <option value="none">Select Bank</option>
+                  <option value="standard">Standard Bank</option>
+                  <option value="fnb">Fist National Bank</option>
+                  <option value="absa">Absa</option>
+                  <option value="capitec">Capitec Bank</option>
+                  <option value="african">African Bank</option>
+                  <option value="investec">Investec</option>
+                  <option value="bidvest">Bidvest ABnk</option>
+                 </select>
+              </div>
+              <div>
+                <label>Account Types</label>
+                <select name="type" id="">
+                  <option value="">Select acount type</option>
+                  <option value="savings">Savings</option>
+                  <option value="cheque">Cheque</option>
+                </select>
+              </div>
+              <div>
+                <label>Account holder</label>
+                <input type="text" class="letters-only" placeholder="Account holder">
+              </div>
+            </div>
+          <div class="form-six form-step ">
+          
+              <h2>Document Upload</h2>
+            <div class="wrapper">
+              <div class="details documents">
+                 <div class="document-row">
+                      <p>UPLOAD NATIONAL ID</p>
+                      <input  type="file"  class="file-input" id="id-file"   accept="application/pdf" hidden>
+                      </div>
+                      <div class="document-row">
+                          <p>UPLOAD 3 MONTHS BANK STATEMENT</p>
+                          <input type="file" id="bank-statement-file" class="file-input" accept="application/pdf" hidden>
+                      </div>
+                      <div class="document-row">
+                          <p>UPLOAD RECENT PAYSLIP</p>
+                          <input  type="file" class="file-input" id="recent-payslip-file" accept="application/pdf" hidden>
+                          </div>
+                          <div id="error-message-document" class="error-message" style="display: none;">PLEASE UPLOAD ALL 3 DOCUMENTS</div>
+                          <div class="progress-field">
+                              <ul>
+                                  <li>Document Type</li>
+                                  <li>Document Name</li>
+                                  <li>Uploaded</li>
+                              </ul>
+                              <div class="file">
+                                  <div class="document">
+                                      <label for="id-file">ID Document:</label>
+                                      <div class="name-size">
+                                        <span class="document-status" id="id-status"></span>
+                                        <span class="document-size" id="id-size"></span>
+                                      </div>
+                                      <span class="document-status" id="id-status-upload"></span>
+                                  </div>
+                            <div class="document">
+                              <label for="bank-statement-file">Bank Statement:</label>
+                              <div class="name-size" id="bankstatement">
+                                  <span class="document-status" id="bank-statement-status"></span>
+                                  <span class="document-size" id="bank-statement-size"></span>
+                              </div>
+                              <span class="document-status" id="bank-statement-status-upload"></span>
+                            </div>
+          
+                            <div class="document">
+                              <label for="recent-payslip-file">Recent Payslip:</label>
+                              <div class="name-size">
+                                  <span class="document-status" id="recent-payslip-status"></span>
+                                  <span class="document-size" id="payslip-size"></span>
+                              </div>
+                            <span class="document-status" id="recent-status-upload"></span>
+                              </div>  
+                          </div>
+                          </div>
+               </div>
+              </div>
+          </div>
+          <div class="form-seven form-step">
+          
+            <h2>Complete Application</h2>
+            <p>Thank you for submitting your application. You will receive a confirmation email shortly. <br> <br>
+              Please note that submitting an application does not guarantee approval. Our team of financial experts will review your application and advise on the next steps to take. <br> <br>For support, please feel free to email us at <span>support@allinc.com</span></p>
+          </div>
+          <div class="btn-group">
+            <button type="button" id="button" class="btn-prev" >Back</button>
+            <button type="button" id="button" class="btn-next">Next Step</button>
+            <button type="button" id="button" class="btn-done" onclick= "newApplication()" >Done</button>
+          
+            
+           
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <script src="/JS/apply.js"></script>
+    
+    <script src="/JS/script.js"></script>
+
+    <div id="footer-placeholder">
+    </div>
+    <script>
+         $.get("footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/pages.css">
+    <title>Small Business Essential</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder">
+  </div>
+  <script>
+       $.get("navbar.html", function(data){
+          $("#navbar-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+
+  <div class="containers">
+    <h1>Small Business Essential</h1>
+    <h3>Understand the financial basics of managing a small business.</h3>
+    <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/growth.png" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>Developing a Business Plan</h1>
+          <br>
+          <p>Learn about the components of a business plan and how to create one that communicates your business financial future and health.</p>
+        </div>
+        <div class="button-container">
+          <a href="financialfoundation.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>   
+      <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/arrow.png" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>How Businesses Use Loan</h1>
+          <br>
+          <p>Learn about the different types of loan that can support your business operations.</p>
+        </div>
+        <div class="button-container">
+          <a href="financialfoundation.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>   
+      <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/loan.png" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>How Business Obtain Loan's</h1>
+          <br>
+          <p>Learn what's needed to obtain loan, so that you're better prepared when you're ready to apply.</p>
+        </div>
+        <div class="button-container">
+          <a href="financialfoundation.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>   
+      <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/moneyscale.png" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>Financial Wellbeing for Entrepreneurs</h1>
+          <br>
+          <p>Learn more about the financial basics of entrepreneurship.</p>
+        </div>
+        <div class="button-container">
+          <a href="financialfoundation.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>   
+  </div>
+  <div id="footer-placeholder">
+  </div>
+  <script>
+       $.get("footer.html", function(data){
+          $("#footer-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+</body>
+</html>

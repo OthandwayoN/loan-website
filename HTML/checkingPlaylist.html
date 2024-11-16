@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>car information playlist</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="/CSS/playlist.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+        
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="heading">
+      <h1>Checking Accounts</h1>
+   </div>
+
+   <nav class="navbar">
+      <a href="#" onclick="highlightBox('getting')"><span>Getting Started</span></a>
+      <a href="#" onclick="highlightBox('benefits')"><span>What can checking accounts do for me?</span></a>
+      <a href="#" onclick="highlightBox('types')"><span>Types of checking accounts</span></a>
+      <a href="#" onclick="highlightBox('open')"><span>How do I open a checking account</span></a>
+      <a href="#" onclick="highlightBox('debit')"><span>How do debit cards work</span></a>
+      <a href="#" onclick="highlightBox('checks')"><span>How do I use checks</span></a>
+   </nav>
+   <div class="button-container">
+      <a href="financialfoundation.html"><button class="button">Go Back</button>
+      </a>
+</div>
+</div>
+
+
+
+<section class="playlist-videos">
+
+   <h1 class="heading">playlist videos</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="https://youtu.be/vYLDQsuWp1w" target="_blank" id="getting">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/checking.jpeg" alt="">
+         <h3>Getting Started</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/L4BZSW98ZDI" target="_blank" id="benefits">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/maxresdefault.jpg" alt="">
+         <h3>benefits of checking accounts</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/mp-2HPD7I6M" target="_blank" id="types">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/Types-of-Checking-Accounts-1.png" alt="">
+         <h3>Types of checking accounts</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/b7zEzG5P_gQ" target="_blank" id="open">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/open.jpeg" alt="">
+         <h3>How to open a checking account</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/At5rNIGwTlw" target="_blank" id="debit">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/debit.jpeg" alt="">
+         <h3>How debit cards work</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/pYIdhXxfV5c" target="_blank" id="checks">
+        <i class="fas fa-play"></i>
+        <img src="/MEDIA/checks.jpg" alt="">
+        <h3>How to use checks</h3>
+     </a>
+   
+   </div>
+
+</section>
+<script>
+   function highlightBox(id) {
+      // Remove glow from all boxes
+      var allBoxes = document.querySelectorAll('.box');
+      allBoxes.forEach(function(box) {
+         box.classList.remove('glow');
+      });
+   
+      // Highlight the selected box
+      var box = document.getElementById(id);
+      if (box) {
+         box.classList.add('glow');
+         setTimeout(function() {
+            box.classList.remove('glow');
+         }, 3000); // Remove glow effect after 2 seconds
+      }
+   }
+   </script>
+   
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>AllInclusive Lends</span> | all rights reserved!
+
+</footer>
+
+
+<!-- custom js file link  -->
+<script src="/JS/playlist.js"></script>
+
+
+
+</body>
+</html>

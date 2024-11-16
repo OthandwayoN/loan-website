@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Calculator</title>
+<link rel="stylesheet" type="text/css" href="/CSS/calculate.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder">
+  </div>
+  <script>
+       $.get("navbar.html", function(data){
+          $("#navbar-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+  <div class="calculator-container"></div>
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-e9e88b02-1542-4c3f-8740-3ad0adb7ee24" data-elfsight-app-lazy></div>
+<div class="calculator-heading">
+  <h1>Let's Explore Your Affordability with Our Budget Calculator</h1>
+</div>
+ 
+<div class="calculator-container">
+  <h2>Loan Calculator</h2>
+  <div class="form-container">
+    <div class="calculator-input">
+      <label for="loanAmount">Loan Amount (R):</label>
+      <input type="number" id="loanAmount" min="1" required>
+    </div>
+ 
+    <div class="calculator-input">
+      <label for="interestRate">Interest Rate (%):Min 7.5% </label>
+      <input type="number" id="interestRate" min="7.5" required>
+      <span id="interestRateError" class="error-message"></span>
+ 
+      <label for="years">Years:</label>
+      <input type="number" id="years" min="1" required>
+ 
+      <label for="loanType">Loan Type:</label>
+      <select id="loanType" required>
+        <option value="">Select</option>
+        <option value="student">Student Loan</option>
+        <option value="personal">Personal Loan</option>
+        <option value="business">Business Loan</option>
+        <option value="Home">Home Loan</option>
+        <option value="Vehicle">Vehicle Loan</option>
+      </select>
+    </div>
+    <button id="calculateBtn">Calculate</button><br>
+    <div id="error"></div>
+    <!-- <button id="exitBtn" style="display: none;">Exit</button> Exit button initially hidden -->
+ </div>
+  </div>
+  <div id="resultsContainer" style="display: none;">
+    <div class="calculator-results">
+      <h3>Monthly Payment:</h3>
+      <p id="monthlyPayment"></p>
+    </div>
+    <div class="calculator-results">
+      <h3>Total Interest Paid:</h3>
+      <p id="totalInterest"></p>
+    </div>
+    <div class="calculator-results">
+      <h3>Total Amount Paid:</h3>
+      <p id="totalAmount"></p>
+    </div>
+    <div class="calculator-error" id="message"></div>
+    
+  </div>
+</div>
+<div class="chart-container">
+  <div id="pieChartContainer" style="display:auto;"> <!-- Container for the pie chart -->
+  <canvas id="pieChart"></canvas> <!-- Pie chart canvas -->
+</div>
+  <!-- JavaScript file for loan calculation -->
+  <script src="/JS/calculator.js"></script>
+  <div id="footer-placeholder">
+  </div>
+  <script>
+       $.get("footer.html", function(data){
+          $("#footer-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+</body>
+</html>
+ 
+ 
+ 

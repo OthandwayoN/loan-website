@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-step form</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2 id="heading">Apply for a loan</h2>
+                <p>Fill all form fields to go to next step</p>
+                <form id="msform">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Personal</strong></li>
+                        <li id="personal"><strong>Employment & Income</strong></li>
+                        <li id="payment"><strong>Document Upload</strong></li>
+                        <li id="confirm"><strong>Complete</strong></li>
+                       
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Personal Information:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 1 - 4</h2>
+                                </div>
+                            </div> 
+                            <label class="fieldlabels">Full Name: *</label> 
+                            <input type="text" name="name" placeholder="Enter your full name" />
+                            <label class="fieldlabels">Date of birth: *</label> 
+                            <input type="date" name="dob" placeholder="Select your date of birth" />
+                            <label class="fieldlabels">National ID: *</label> 
+                            <input type="text" name="id" placeholder="Enter your 13-digit ID number" />
+                             <label class="fieldlabels">Email: *</label> 
+                             <input type="email" name="email" placeholder="Enter email address" /> 
+                             <label class="fieldlabels">Contact Number: *</label> 
+                            <input type="text" name="phone" placeholder="Enter your phone number" />
+                          
+                              <label class="fieldlabels">Confirm Password: *</label> 
+                              <input type="password" name="cpwd" placeholder="Confirm Password" />
+                              <label class="fieldlabels">Marital Status: *</label> 
+                              <select>
+                                     <option value=""></option>
+                                     <option value="single">Single</option>
+                                     <option value="married">Married</option>
+                                     <option value="divorced">Divorced</option>
+                                     <option value="widowed">Widowed</option>    
+                              </select>
+                              <label>Gender*</label>
+                              <div class="radio-buttons">
+                                  <input type="radio" id="female" value="female" name="gender" hidden>
+                                  <label for="female">
+                                      <img src="/MEDIA/female.png" alt="" id="female">
+                                  </label>
+                                      <input type="radio" id="male" name="gender" value="male" hidden>
+                                  <label for="male">
+                                      <img src="/MEDIA/male.png" alt="" id="male">
+                                  </label>
+                              </div> 
+                        </div>
+                         <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Personal Information:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 2 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="First Name" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Image Upload:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 3 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
+                        </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 4 - 4</h2>
+                                </div>
+                            </div> <br><br>
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="img.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

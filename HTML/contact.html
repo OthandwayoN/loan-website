@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" 
+        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" 
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/CSS/home.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="navbar-placeholder">
+        
+    </div>
+    <script>
+         $.get("navbar.html", function(data){
+            $("#navbar-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+   
+  
+    <br>
+    <br>
+<div class="contact" id="contact">
+    <div class="contact-col">
+        <h3>Send us an enquiry <img src="msg-icon.png" alt=""></h3>
+        <p>Feel free to reach out through the contact form or find our contact
+          information below. Your feedback, questions and suggestions are 
+          important to us as we strive to provide exceptional service to our 
+          community.</p>
+        <ul>
+            <li><img src="/MEDIA/email.png" alt="">info@allinclusive.co.za </li>
+            <li><img src="/MEDIA/phone.png" alt="">+27 21 680 0900</li>
+            <li><img src="/MEDIA/location.png" alt="">3rd floor redPanda Place Golf Park, Raapenberg Rd, Mowbray, Cape Town, 7700<br>Western Cape, South Africa </li>
+        </ul>
+    </div>
+    <div class="contact-col">
+        <form id="contactForm">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" required>
+            <label>Write your message here</label>
+            <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+            <button type="submit" class="btn dark-btn">Send</button>
+        </form>
+        <span id="result"></span>
+    </div>
+</div>
+
+<div class="location">
+    <h2>Visit Us</h2>
+<br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.7512764363732!2d18.489545198299417!3d-33.94752473863883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5ce9beb3896f%3A0xbfa9ddd815914a89!2sredPanda%20Software!5e0!3m2!1sen!2sza!4v1712217018499!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('result').textContent = "Sending....";
+
+    const formData = new FormData(this);
+    formData.append("access_key", "0d111d69-06a4-4e9e-9698-b9bb564f06ee");
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById('result').textContent = "Form Submitted Successfully";
+            document.getElementById('contactForm').reset();
+        } else {
+            console.log("Error", data);
+            document.getElementById('result').textContent = data.message;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('result').textContent = "An error occurred while submitting the form.";
+    });
+});
+</script>
+<div id="footer-placeholder">
+</div>
+<script>
+     $.get("footer.html", function(data){
+        $("#footer-placeholder").replaceWith(data);
+    }).fail(function(xhr, status, error) {
+        console.error("Error loading footer:", error);
+    });
+</script> 
+</div>
+</body>
+</html>

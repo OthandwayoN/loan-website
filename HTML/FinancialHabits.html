@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>financial information playlist</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="/CSS/playlist.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+        
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="heading">
+      <h1>Financial Habits</h1>
+   </div>
+
+   <nav class="navbar">
+      <a href="#" onclick="highlightBox('fit')"><span>How to tell if you are financially fit</span></a>
+      <a href="#" onclick="highlightBox('means')"><span>Live within your means</span></a>
+      <a href="#" onclick="highlightBox('savings')"><span>Build emergency savings</span></a>
+      <a href="#" onclick="highlightBox('avoid')"><span>Avoid too much debt</span></a>
+      <a href="#" onclick="highlightBox('manage')"><span>Manage existing debt</span></a>
+      <a href="#" onclick="highlightBox('save')"><span>Save for retirement</span></a>
+   </nav>
+   <div class="button-container">
+      <a href="FinancialResilience.html"><button class="button">Go Back</button>
+      </a>
+</div>
+</div>
+
+
+
+<section class="playlist-videos">
+
+   <h1 class="heading">playlist videos</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="https://youtu.be/cxKU__jZl6g" target="_blank" id="fit">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/Financially-Fit.jpg" alt="">
+         <h3>How to tell if you are financially fit</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/B9ESJc5Q6kg" target="_blank" id="means">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/needs.png" alt="">
+         <h3>Live within your means</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/Vt-39PXYwuU" target="_blank" id="savings">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/eme.jpeg" alt="">
+         <h3>Build emergency savings</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/CHiOBzqcMV8" target="_blank" id="avoid">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/debtavoid.jpeg" alt="">
+         <h3>Avoid too much debt</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/fxJhPuF-cuQ" target="_blank" id="manage">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/manage.jpeg" alt="">
+         <h3>Manage existing debt</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/xDYUAQTqxK4" target="_blank" id="save">
+        <i class="fas fa-play"></i>
+        <img src="/MEDIA/retire.webp" alt="">
+        <h3>Save for retirement</h3>
+     </a>
+   
+   </div>
+
+</section>
+<script>
+   function highlightBox(id) {
+      // Remove glow from all boxes
+      var allBoxes = document.querySelectorAll('.box');
+      allBoxes.forEach(function(box) {
+         box.classList.remove('glow');
+      });
+   
+      // Highlight the selected box
+      var box = document.getElementById(id);
+      if (box) {
+         box.classList.add('glow');
+         setTimeout(function() {
+            box.classList.remove('glow');
+         }, 3000); // Remove glow effect after 2 seconds
+      }
+   }
+   </script>
+   
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>AllInclusive Lends</span> | all rights reserved!
+
+</footer>
+
+
+<!-- custom js file link  -->
+<script src="/JS/playlist.js"></script>
+
+
+
+</body>
+</html>

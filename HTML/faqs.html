@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="/CSS/faqs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder">
+    </div>
+    <script>
+         $.get("navbar.html", function(data){
+            $("#navbar-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+
+    
+    <div class="wrapper">
+       
+        <h1>Frequently Asked Questions</h1>
+        <br>
+        <div class="faq">
+            <button class="accordion">
+                What types of loans does All Inclusive Lends offer?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    All Inclusive Lends offers a range of loan options to suit your needs, including:
+                        <li>Home Finance Loans</li>
+                        <li>Personal Loans</li>
+                        <li>Education Loans</li>
+                        <li>Vehicle Finance Loans </li>                                                        
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                How do I apply for a loan with All Inclusive Lends?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    Applying for a loan with All Inclusive Lends is simple. You can start by visiting our website and filling out an online application form. Our customer service team is also available to assist you throughout the application process.  
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                What are the eligibility requirements for a personal loan?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    The eligibility criteria for a personal loan may include factors such as credit history, income, employment status, and age. Our team will guide you through the specific requirements based on your circumstances.  
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+            What are the benefits of choosing All Inclusive Lends for home finance loans?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    All Inclusive Lends offers competitive rates, flexible repayment options, and personalized service to make your home ownership journey smooth and rewarding. Our experienced team is dedicated to helping you find the right home finance solution tailored to your needs.  
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                Can I use a personal loan for debt consolidation?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    Yes, you can use a personal loan from All Inclusive Lends to consolidate your debts into one manageable payment. This can help simplify your finances and potentially lower your overall interest rate.
+                </p>
+            </div>
+        </div>
+         <div class="faq">
+            <button class="accordion">
+                Are there any fees associated with applying for a loan?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    All Inclusive Lends strives to be transparent about our fees and charges. While there may be certain fees associated with loan applications, such as processing fees or origination fees, these will be clearly outlined in your loan agreement.  
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="accordion">
+                What documentation do I need to provide when applying for a vehicle finance loan?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    When applying for a vehicle finance loan with All Inclusive Lends, you will typically need to provide documents such as proof of identity, proof of income, and details about the vehicle you intend to purchase.  
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+   
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+   <div id="footer-placeholder">
+</div>
+<script>
+     $.get("footer.html", function(data){
+        $("#footer-placeholder").replaceWith(data);
+    }).fail(function(xhr, status, error) {
+        console.error("Error loading footer:", error);
+    });
+</script> 
+</body>
+</html

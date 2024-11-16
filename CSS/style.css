@@ -1,0 +1,493 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 1rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.contain{
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.containing {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.outer-containing{
+  margin-top: 30px;
+  min-height: 100vh;
+  background: white;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containing header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.containing form {
+  min-height: 950px;
+  background-color: #fff;
+  overflow: scroll;
+  padding-top: 100px; /* Add padding to compensate for the fixed navbar */
+  margin-top: 100px; /* Adjust margin to create space for the fixed navbar */
+}
+.containing form .form {
+  position: absolute;
+  background-color: #fff;
+  transition: 0.01s ease;
+}
+
+.containing form .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+
+.containing form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .fields .input-field,
+select {
+  display: flex;
+  width: calc(100% / 4 -10px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.input-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.containing .complete {
+  padding-left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border-top: none;
+  border-bottom: 1px solid #aaa;
+  border-left: none;
+  border-right: none;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.radio-buttons {
+  display: flex;
+}
+
+.radio-buttons label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.radio-buttons label img {
+  width: 52px;
+  cursor: pointer;
+  padding-right: 11px;
+}
+
+.radio-buttons input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.radio-buttons input[type="radio"]:checked+label img {
+  border: 2px solid #2b2d42;
+}
+
+.input-field input:is(:focus, :valid) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field input[type="date"] {
+  color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+  color: #333;
+}
+
+.radio-butts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.radio-containing {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radio-label {
+  margin-right: 10px;
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.containing form button,
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 25px 0;
+  background-color: #070707;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.containing form button,
+.containing form .backBtn {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+form button:hover {
+  background-color: #265df2;
+}
+
+form button i,
+form .backBtn i {
+  margin: 0 6px;
+}
+
+form .backBtn i {
+  transform: rotate(180deg);
+}
+
+form .buttons {
+  display: flex;
+  align-items: center;
+}
+
+form .buttons button,
+.backBtn {
+  margin-right: 14px;
+}
+#form1{
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 700px; /* Set a maximum height for the form containing */
+}
+
+#form2 {
+  left: 3000px;
+}
+
+#form3 {
+ 
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 700px; /* Set a maximum height for the form containing */
+   left: 3000px;
+}
+
+#form4 {
+  left: 3000px;
+}
+
+#form5 {
+  left: 3000px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 700px; /* Set a maximum height for the form containing */
+}
+
+#form6 {
+  left: 3000px
+}
+
+.containing .progress-bar {
+  display: flex;
+  position: sticky;
+  margin: 40px 0;
+  user-select: none;
+}
+
+.containing .progress-bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.containing .progress-bar .step p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.progress-bar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+  border-color: #858ac0;
+  background: #858ac0;
+}
+
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -118px;
+  height: 3px;
+  width: 116px;
+  background: #262626;
+}
+
+.progress-bar .step .bullet.active:after {
+  background: #858ac0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.5s linear forwards;
+}
+
+@keyframes animate {
+  100% {
+      transform: scaleX(1);
+  }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+
+.progress-bar .step p.active {
+  color: #2b2d42;
+  transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.progress-bar .step .bullet .check.active {
+  display: block;
+  color: #fff;
+}
+
+.wrapper {
+  padding-left: 200px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wrapper .document-row {
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 2px dashed #949494;
+  color: #949494;
+}
+
+header {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.progress-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.progress-field ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-field .file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.file .document {
+  padding-left: 40px;
+  display: flex;
+}
+
+.document .name-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-size .document-status {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.name-size .document-size {
+  font-size: 13px;
+  margin-left: 10px;
+  color: #666;
+  padding-bottom: 10px;
+}
+
+.document span {
+  padding-left: 170px;
+}
+
+.file label {
+  padding-bottom: 1em;
+}
+
+.details.documents {
+  display: flex;
+  flex-direction: column;
+}
+
+.document-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+form p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+label {
+  flex: 1;
+}
+
+.file-input {
+  flex: 3;
+}
+
+.document-status,
+.fas .fa-file-alt {
+  flex: 1;
+  text-align: center;
+}
+
+.progress-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+  .wrapper {
+      padding-left: 100px;
+  }
+}
+
+@media (max-width: 750px) {
+  .containing form {
+      overflow: scroll;
+  }
+
+  .containing form::-webkit-scrollbar {
+      display: none;
+  }
+
+  form .fields .input-field {
+      width: calc(100% / 2 - 15px);
+  }
+}
+
+@media (max-width: 550px) {
+  form .fields .input-field {
+      width: 100%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .wrapp {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+  }
+
+  .contain {
+      height: 300px;
+      width: 300px;
+  }
+
+  input[type="checkbox"]:after {
+      font-size: 22px;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Comparison</title>
+    <link rel="stylesheet" href="/CSS/loanComp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="navbar-placeholder">
+    </div>
+    <script>
+         $.get("navbar.html", function(data){
+            $("#navbar-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+    <div class="loan-comparison">
+        <h2>Loan Comparison</h2>
+        <div class="loan-table">
+            <div class="card">
+                <div class="heading">
+                    <h3>Personal Loan</h3>
+                </div>
+                <div class="loan-image">
+                    <img src="./src/student.jpeg" alt="Personal Loan">
+                </div>
+                <p>Interest Rate:</p>
+                <p id="detail"> 8% p.a.</p>
+                <p>Maximum Loan Amount:</p>
+                <p id="detail"> R500,000</p>
+                <p>Repayment Term:</p>
+                <p id="detail"> 1-5 years</p>
+                <p>Eligibility:</p>
+                <p id="detail"> Good credit score required</p>
+            </div>
+            <div class="card">
+                <div class="heading">
+                    <h3>Student Loan</h3>
+                </div>
+                <p>Interest Rate:</p>
+                <p id="detail">5% p.a.</p>
+                <p>Maximum Loan Amount:</p> 
+                <p id="detail">R1,000,000</p>
+                <p>Repayment Term:</p>
+                <p id="detail">5-20 years</p>
+                <p>Eligibility:</p>
+                <p id="detail">Available for students with enrolled status</p>
+            </div>
+            <div class="card">
+                <div class="heading">
+                    <h3>Business Loan</h3>
+                </div>
+                
+             
+                <p>Interest Rate: </p>
+                <p id="detail">10% p.a.</p>
+                <p>Maximum Loan Amount:</p>
+                <p id="detail"> R2,000,000</p>
+                <p>Repayment Term:</p>
+                <p id="detail"> 1-10 years</p>
+                <p>Eligibility:</p>
+                <p id="detail">Business registration required</p>
+            </div>
+            <div class="card">
+                <div class="heading">
+                    <h3>Vehicle Loan</h3>
+                </div>
+                <p>Interest Rate:</p>
+                <p id="detail"> 7% p.a.</p>
+                <p>Maximum Loan Amount:</p>
+                <p id="detail"> R400,000</p>
+                <p>Repayment Term:</p>
+                <p id="detail"> 1-7 years</p>
+                <p>Eligibility:</p>
+                <p id="detail"> Vehicle details required</p>
+            </div>
+           
+            <div class="card">
+                <div class="heading">
+                    <h3>Home Loan</h3>
+                </div>
+                <p>Interest Rate:</p>
+                <p id="detail"> 4% p.a.</p>
+                <p>Maximum Loan Amount:</p>
+                <p id="detail"> R5,000,000</p>
+                <p>Repayment Term:</p>
+                <p id="detail"> 10-30 years</p>
+                <p>Eligibility:</p>
+                <p id="detail"> Mortgage qualification required</p>
+            </div>
+        </div>
+         
+  
+        </div>
+        <div id="footer-placeholder">
+        </div>
+        <script>
+             $.get("footer.html", function(data){
+                $("#footer-placeholder").replaceWith(data);
+            }).fail(function(xhr, status, error) {
+                console.error("Error loading footer:", error);
+            });
+        </script> 
+      
+</body>
+</html>

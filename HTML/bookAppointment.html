@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({$ npm install --save @emailjs/browser
+        publicKey: "Jy51MwJPlgwfgWLg4",
+      });
+   })();
+</script>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="/CSS/Appointment.css" />
+    <script src="/JS/appointment.js" defer></script>
+  </head>
+  <body>
+    <div id="navbar-placeholder">
+    </div>
+    <script>
+         $.get("navbar.html", function(data){
+            $("#navbar-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+    <chat-bot platform_id="4c464895-ba0c-4393-a950-134926daca78" user_id="873fb4f6-0d2b-4282-873a-3795391f85c4" chatbot_id="9578a2c5-2b20-4151-9f8e-bb2b86289ec0"><a href="https://www.chatsimple.ai/?utm_source=widget&utm_medium=referral">chatsimple</a></chat-bot><script src="https://cdn.chatsimple.ai/chat-bot-loader.js" defer></script>
+    <div class="form-contain">
+    <div class="form">
+      <div class="form-container">
+        <!-- Sidebar start -->
+        <div class="form-sidebar">
+          <div class="step active">
+            <div class="circle">1</div>
+            <div class="step-content">
+              <span>Personal information</span>
+              <b>Your info</b>
+            </div>
+          </div>
+          <div class="step">
+            <div class="circle">2</div>
+            <div class="step-content">
+              <span>Select Time & Date</span>
+              
+            </div>
+          </div>
+          <div class="step">
+            <div class="circle">3</div>
+            <div class="step-content">
+              <span>Confirm Booking Details</span>
+            
+            </div>
+          </div>
+          <div class="step">
+            <div class="circle">4</div>
+            <div class="step-content">
+              <span>Finish</span>
+             
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar end -->
+        <!-- * Step 1 start -->
+        <div class="stp step-1">
+          <div class="header">
+            <h1 class="title">Personal info</h1>
+            <p class="exp">
+              Please provide your name, email address, and phone number.
+            </p>
+          </div>
+          <form>
+            <div class="label">
+              <label for="name">Name</label>
+              <p class="error">This Field Is Required</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="name"
+              placeholder="e.g. Victor Ndou"
+            />
+            <div class="label">
+              <label for="email">Email Address</label>
+              <p class="error">This Field Is Required</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="email"
+              placeholder="e.g. victorndou@gmail.com"
+            />
+            <div class="label">
+              <label for="phone">Phone Number</label>
+              <p class="error">This Field Is Required</p>
+            </div>
+            <input
+              required
+              type="tel"
+              id="phone"
+              placeholder="e.g. +27 72 772 4895"
+            />
+          </form>
+          <div class="btns">
+            <button class="next-stp" type="submit">Next Step</button>
+          </div>
+        </div>
+        <!-- Step 1 end -->
+        <!-- * Step 2 start -->
+        <div class="stp step-2">
+          <div class="header">
+            <h1 class="title">Time & Date</h1>
+            <p class="exp">When would you like to visit us?</p>
+          </div>
+          <form id="appointment-form">
+            <div class="datepicker-container">
+              <input type="text" class="time-pickable" placeholder="Select date" readonly>
+              <script>
+                function activate() {
+          document.head.insertAdjacentHTML("beforeend", `
+            <style>
+              .time-picker {
+                position: absolute;
+                display: inline-block;
+                padding: 10px;
+                background: #eeeeee;
+                border-radius: 6px;
+              }
+        
+              .time-picker__select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                outline: none;
+                text-align: center;
+                border: 1px solid #dddddd;
+                border-radius: 5px;
+                padding: 6px 10px;
+               
+                background: #ffffff;
+                cursor: pointer;
+                font-family: 'Heebo', sans-serif;
+              }
+
+              .time-pickable {
+  /* Apply the same styles as date-picker */
+  border: 1px solid #0d1750;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+            </style>
+          `);
+        
+          document.querySelectorAll(".time-pickable").forEach(timePickable => {
+        let activePicker = null;
+
+        timePickable.addEventListener("focus", () => {
+            if (activePicker) return;
+
+            activePicker = show(timePickable);
+
+            const onClickAway = ({ target }) => {
+                if (
+                    target === activePicker
+                    || target === timePickable
+                    || activePicker.contains(target)
+                ) {
+                    return;
+                }
+
+                document.removeEventListener("mousedown", onClickAway);
+                document.body.removeChild(activePicker);
+                activePicker = null;
+            };
+
+            document.addEventListener("mousedown", onClickAway);
+        });
+    });
+}
+
+function show(timePickable) {
+    const picker = buildPicker(timePickable);
+    const { bottom: top, left } = timePickable.getBoundingClientRect();
+
+    picker.style.top = `${top}px`;
+    picker.style.left = `${left}px`;
+
+    document.body.appendChild(picker);
+
+    return picker;
+}
+
+function buildPicker(timePickable) {
+    const picker = document.createElement("div");
+    const hourOptions = [];
+    const minuteOptions = [0, 15, 30, 45].map(numberToOption); // Options are now at 15-minute intervals
+
+    // Construct hourOptions from 9am to 3pm
+    for (let hour = 9; hour <= 15; hour++) {
+        hourOptions.push(numberToOption(hour));
+    }
+
+    picker.classList.add("time-picker");
+    picker.innerHTML = `
+        <select class="time-picker__select">
+            ${hourOptions.join("")}
+        </select>
+        :
+        <select class="time-picker__select">
+            ${minuteOptions.join("")}
+        </select>
+    `;
+
+    const selects = getSelectsFromPicker(picker);
+
+    selects.hour.addEventListener("change", () => timePickable.value = getTimeStringFromPicker(picker));
+    selects.minute.addEventListener("change", () => timePickable.value = getTimeStringFromPicker(picker));
+
+    if (timePickable.value) {
+        const { hour, minute } = getTimePartsFromPickable(timePickable);
+
+        selects.hour.value = hour;
+        selects.minute.value = minute;
+    }
+
+    return picker;
+}
+
+function getTimePartsFromPickable(timePickable) {
+    const pattern = /^(\d+):(\d+)$/;
+    const [hour, minute] = Array.from(timePickable.value.match(pattern)).splice(1);
+
+    return {
+        hour,
+        minute
+    };
+}
+
+function getSelectsFromPicker(timePicker) {
+    const [hour, minute] = timePicker.querySelectorAll(".time-picker__select");
+
+    return {
+        hour,
+        minute
+    };
+}
+
+function getTimeStringFromPicker(timePicker) {
+    const selects = getSelectsFromPicker(timePicker);
+
+    return `${selects.hour.value}:${selects.minute.value}`;
+}
+
+function numberToOption(number) {
+    const padded = number.toString().padStart(2, "0");
+
+    return `<option value="${padded}">${padded}</option>`;
+}
+
+activate();
+            </script>
+            
+              <input type="text" class="date-input" placeholder="Select date" />
+        
+              <div class="datepicker" hidden>
+                <!-- .datepicker-header -->
+                <div class="datepicker-header">
+                  <button class="prev">Prev</button>
+        
+                  <div>
+                    <select class="month-input">
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                    <input type="number" class="year-input" />
+                  </div>
+        
+                  <button class="next">Next</button>
+                </div>
+                <!-- /.datepicker-header -->
+        
+                <!-- .days -->
+                <div class="days">
+                  <span>Sun</span>
+                  <span>Mon</span>
+                  <span>Tue</span>
+                  <span>Wed</span>
+                  <span>Thu</span>
+                  <span>Fri</span>
+                  <span>Sat</span>
+                </div>
+                <!-- /.days -->
+        
+                <!-- .dates -->
+                <div class="dates"></div>
+                <!-- /.dates -->
+        
+                <!-- .datepicker-footer -->
+                <div class="datepicker-footer">
+                  <button class="cancel">Cancel</button>
+                  <button class="apply">Apply</button>
+                </div>
+                <!-- /.datepicker-footer -->
+              </div>
+             
+            </div>
+            <div id="appointment-details"  style="text-align: center;"></div>
+          </form>
+          
+          <div class="btns">
+            <button class="prev-stp" type="button">Go Back</button>
+            <button class="next-stp" type="submit">Next Step</button>
+          </div>
+      
+        </div>
+        <!-- Step 2 end -->
+        <!-- * Step 3 start -->
+        <div class="stp step-3">
+          <div class="header">
+            <h1 class="title">Confirm Booking Details</h1>
+            <p class="exp">Booking Summary</p>
+          </div>
+          <form > 
+           <div id="Summary"></div>
+          </form>
+          <div class="btns">
+            <button class="prev-stp" type="button">Go Back</button>
+            <button class="next-stp" onclick="confirmAppointment()" type="submit">Confirm Booking</button>
+          </div>
+        </div>
+        <!-- Step 3 end -->
+        <!-- * Step 4 start -->
+        <div class="stp step-4">
+          <div class="header">
+            <h1 class="title">Thank you!</h1>
+            <p class="exp">
+              Thanks for booking! You will receive an email confirming 
+              your appointment. We hope to see you soon.
+              If you ever need support, please feel free to
+              email us at support@allinclusive.com.
+            </p>
+          </div>
+          <div class="btns">
+            
+            <a href="home.html"><button class="next-stp" type="submit">Done</button></a>
+          </div>
+        </div>
+        <!-- Step 4 end -->
+      
+        <!-- Step 5 end -->
+      </div>
+    </div>
+  </div>
+  
+  <div id="footer-placeholder">
+  </div>
+  <script>
+       $.get("footer.html", function(data){
+          $("#footer-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+  </body>
+</html>

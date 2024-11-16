@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>financial information playlist</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="/CSS/playlist.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+        
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="heading">
+      <h1>Understanding Student Loans</h1>
+   </div>
+   <nav class="navbar">
+      <a href="#" onclick="highlightBox('types')"><span>Types of loans</span></a>
+      <a href="#" onclick="highlightBox('apply')"><span>Applying for student loans</span></a>
+      <a href="#" onclick="highlightBox('plan')"><span>Plan for student loan repayment</span></a>
+      <a href="#" onclick="highlightBox('repay')"><span>Student loan repayment options</span></a>
+     
+     
+   </nav>
+   <div class="button-container">
+      <a href="highereducation.html"><button class="button">Go Back</button>
+      </a>
+</div>
+</div>
+
+
+
+<section class="playlist-videos">
+
+   <h1 class="heading">playlist videos</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="https://youtu.be/mzYwYJT-zsU" target="_blank" id="types">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/types-of-loans.jpg" alt="">
+         <h3>Types of loans</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/tdWLK-rQlFA" target="_blank" id="apply">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/AnOverviewOfStudentsLoansAndTheTypes.jpg" alt="">
+         <h3>Applying for student loans</h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/cWcwcv6V4ck" target="_blank" id="plan">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/repay.jpeg" alt="">
+         <h3>Plan for student loan repayment </h3>
+      </a>
+
+      <a class="box" href="https://youtu.be/Nqs0CvY-PmI" target="_blank" id="repay">
+         <i class="fas fa-play"></i>
+         <img src="/MEDIA/payoff.jpeg" alt="">
+         <h3>Student loan repayment options</h3>
+      </a>
+
+     
+
+  
+   
+   </div>
+
+</section>
+<script>
+   function highlightBox(id) {
+      // Remove glow from all boxes
+      var allBoxes = document.querySelectorAll('.box');
+      allBoxes.forEach(function(box) {
+         box.classList.remove('glow');
+      });
+   
+      // Highlight the selected box
+      var box = document.getElementById(id);
+      if (box) {
+         box.classList.add('glow');
+         setTimeout(function() {
+            box.classList.remove('glow');
+         }, 3000); // Remove glow effect after 2 seconds
+      }
+   }
+   </script>
+   
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>AllInclusive Lends</span> | all rights reserved!
+
+</footer>
+
+
+<!-- custom js file link  -->
+<script src="/JS/playlist.js"></script>
+
+
+
+</body>
+</html>

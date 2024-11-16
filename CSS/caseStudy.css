@@ -1,0 +1,130 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    display: flex;
+    align-items: center ;
+    justify-content: center ;
+}
+.top-section{
+ margin-top: 100px !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.dets{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.dets .business{
+    display: flex;
+    text-decoration: none;
+    background: rgb(224, 224, 224);
+    color: black;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 30px;
+}
+span{
+  padding-left: 5px;
+}
+.heading-case{
+    display: flex;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+.heading-case .tilt{
+    width: 500px;
+}
+.heading-case .tilt h1{
+    font-size: 45px !important;
+    color: rgb(48, 47, 49);
+    font-weight:900;
+}
+.heading-case img{
+    width: 500px;
+    height: 300px;
+}
+.liner{
+    width: 100%;
+    height: 2px;
+    background: rgb(18, 18, 71);
+}
+.content-text{
+    width: 100%;
+}
+
+.content-text p{
+    font-size: 21px !important;
+    
+}
+.content-text .part{
+    display: flex;
+    
+}
+.content-text .part .text-only{
+    width: 750px;
+}
+
+.content-text .part .text-only{
+    font-size: 21px;
+}
+.content-text .part .photos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.content-text .part .photos img{
+   width: 350px;
+   padding-top:  20px;
+   padding-left: 100px;
+   border-radius: 20px;
+}
+.content-text .part .photos button{
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background: white;
+    border: 2px solid rgb(38, 44, 136);
+    color: rgb(11, 11, 63);
+}
+.content-text .part .photos button span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.content-text .part .photos button:hover{
+    background: rgb(8, 4, 56);
+    color: white;
+}
+.case-studies{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-section-case{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px !important;
+  }
+  .case-study{
+    width: 400px;
+    height: 450px;
+    gap: 20px !important;
+  }
+  .case-study img{
+    width: 300px;
+  }
+  #fashion{
+    height: 185px;
+  }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="/CSS/navbar.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <div class="cont">
+      <div class="heade">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <i class="ri-hand-coin-fill"></i> AllInclusive Lends
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li><a href="home.html" class="nav__link">Home</a></li>
+
+                  <li><a href="About.html" class="nav__link">About US</a></li>
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Products<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="products.html#personal" class="dropdown__link">
+                              <i class="ri-user-3-line"></i> Personal
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="products.html#home-loan" class="dropdown__link">
+                              <i class="ri-home-4-line"></i> Home
+                           </a>
+                        </li>
+                        <li>
+                           <a href="products.html#business" class="dropdown__link">
+                              <i class="ri-briefcase-line"></i>Business
+                           </a>
+                        </li>
+                        <li>
+                           <a href="products.html#vehicle" class="dropdown__link">
+                              <i class="ri-car-line"></i> Vehicle
+                           </a>
+                        </li>
+                        <li>
+                           <a href="products.html#student" class="dropdown__link">
+                              <i class="ri-graduation-cap-line"></i> Student
+                           </a>
+                        </li>
+
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              Application <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="ApplicationForm.html" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> Apply online
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="bookAppointment.html" class="dropdown__sublink">
+                                    <i class="ri-map-pin-line"></i> Visit Branch
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li><a href="contact.html" class="nav__link">Contact Us</a></li>
+
+
+                    
+
+                  <li><a href="FinancialEducation.html" class="nav__link">Financial Education</a></li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </div>
+      <!--=============== MAIN JS ===============-->
+      <script src="/JS/navbar.js"></script>
+   </body>
+
+</html>

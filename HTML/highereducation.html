@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/pages.css">
+    <title>Financing Higher Education</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="navbar-placeholder">
+  </div>
+  <script>
+       $.get("navbar.html", function(data){
+          $("#navbar-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+
+  <div class="containers">
+    <h1>Financing Higher Education</h1>
+    <h3>Learn about financing higher education, preparing for graduation, and beginning <br> a career</h3>
+    <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/graduation.png" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>Paying for University</h1>
+          <br>
+          <p>Discover smart ways to plan and pay for college</p>
+        </div>
+        <div class="button-container">
+          <a href="University.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>  
+      <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/road.png" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>Financial Decisions for Your Career Path</h1>
+          <br>
+          <p>Learn about making career choices that benefit your earning potential</p>
+        </div>
+        <div class="button-container">
+          <a href="FinancialDecisions.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>  
+      <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/certificate.jpg" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>Budget Hacks for students</h1>
+          <br>
+          <p>Learn about student loans, key terms, and repayment options</p>
+        </div>
+        <div class="button-container">
+          <a href="BudgetHacks.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>  
+      <div class="contains">
+        <div class="img-holder">
+          <img src="/MEDIA/books.jpeg" alt="">
+        </div>
+        <div class="info-holder">
+          <h1>Understanding student loans</h1>
+          <br>
+          <p>Understand some methods for effectively paying off your loans</p>
+        </div>
+        <div class="button-container">
+          <a href="UnderstandingStudentLoans.html"><button class="button"> Continue
+           
+            <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+              <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          </a>
+        </div>
+      </div>  
+    </div>
+    <div id="footer-placeholder">
+    </div>
+    <script>
+         $.get("footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        }).fail(function(xhr, status, error) {
+            console.error("Error loading footer:", error);
+        });
+    </script> 
+</body>
+</html>

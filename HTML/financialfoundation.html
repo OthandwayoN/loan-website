@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/pages.css">
+    <title>Financial Foundations</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <div id="navbar-placeholder">
+  </div>
+  <script>
+       $.get("navbar.html", function(data){
+          $("#navbar-placeholder").replaceWith(data);
+      }).fail(function(xhr, status, error) {
+          console.error("Error loading footer:", error);
+      });
+  </script> 
+
+<div class="containers">
+<h1>Financial Foundations</h1>
+<div class="contains">
+  <div class="img-holder">
+    <img src="/MEDIA/tag.jpeg" alt="">
+  </div>
+  <div class="info-holder">
+    <h1>Checking Accounts</h1>
+    <br>
+    <p>Learn about the features, benefits, and functions of checking accounts.</p>
+  </div>
+  <div class="spacer"></div>
+  <div class="button-container">
+    <a href="checkingPlaylist.html"><button class="button"> Continue
+           
+      <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+        <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+      </svg>
+    </button>
+    </a>
+  </div>
+</div>
+
+<div class="contains">
+  <div class="img-holder">
+    <img src="/MEDIA/car.jpeg" alt="">
+  </div>
+  <div class="info-holder">
+    <h1>Car Loans</h1>
+    <br>
+    <p>Explore different ways to buy a car and steps you can take to apply for a car loan</p>
+  </div>
+  <div class="spacer"></div>
+    <div class="button-container">
+      <a href="carPlaylist.html"><button class="button"> Continue
+           
+        <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+          <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+        </svg>
+      </button>
+      </a>
+    </div>
+</div>
+
+<div class="contains">
+  <div class="img-holder">
+    <img src="/MEDIA/house.jpeg" alt="">
+  </div>
+  <div class="info-holder">
+    <h1>Build Better Credit</h1>
+    <br>
+    <p>Discover how to establish, improve, and take charge of your credit score</p>
+  </div>
+  <div class="spacer"></div>
+  <div class="button-container">
+    <a href="betterCredit.html"><button class="button"> Continue
+           
+      <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+        <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+      </svg>
+    </button>
+    </a>
+  </div>
+</div>
+</div>
+<div id="footer-placeholder">
+</div>
+<script>
+     $.get("footer.html", function(data){
+        $("#footer-placeholder").replaceWith(data);
+    }).fail(function(xhr, status, error) {
+        console.error("Error loading footer:", error);
+    });
+</script> 
+</body>
+</html>
